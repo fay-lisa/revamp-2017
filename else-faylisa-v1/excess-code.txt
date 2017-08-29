@@ -1,0 +1,13 @@
+					<!-- pulls posts from a category -->
+						<?php
+						$catquery = new WP_Query( 'cat=6&posts_per_page=3' );
+						while($catquery->have_posts()) : $catquery->the_post();
+						?>
+							<ul>
+							<li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+
+							<ul><li><?php the_content(); ?></li>
+							</ul>
+							</li>
+							</ul>
+						<?php endwhile; ?>

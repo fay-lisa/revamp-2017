@@ -1,0 +1,68 @@
+/*! http://responsiveslides.com v1.53 by @viljamis 
+Thanks viljamis for such a great, responsive slider */
+#slider2 {  margin: 0 auto;  }
+
+.rslides {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #e9e3d5;
+  padding:0;
+  margin:0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+   margin-bottom:0;
+
+  }
+
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+
+  }
+
+  .rslides_tabs {
+ /* background: rgba(0,0,0,.25);
+  box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);*/
+  background: #bad5cf;
+  font-size: 18px;
+  margin: 0 auto 50px;
+  max-width: 640px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 7px;
+  border: 1px solid #bad5cf;
+  
+  }
+
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  margin-right: 1px;
+  }
+
+.rslides_tabs a {
+  line-height: 20px;
+  padding: 9px 20px;
+  display: inline;
+  color:#000;
+  }
+
+.rslides_tabs .rslides_here a {
+  background: #99bec4;
+  color: #fff;
+  font-weight: bold;
+  }

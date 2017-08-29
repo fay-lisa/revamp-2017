@@ -1,0 +1,666 @@
+/*
+	Theme Name: AG Skeleton Frame 2.0
+	Theme URI: http://www.actuallygood.ca
+	Author: Claire Ryan (Tech) / Fay-Lisa Jensen (Design, CSS, HTML, jQuery)
+	Author URI: http://www.actuallygood.ca
+	Description: Theme Framework for use with Actually Good website projects | compatible with WP 3.4+
+	Version: 2.0
+	License: GNU General Public License v2 or later
+  Thank you to Josh Hopkins and 40 Horse for the new grid starting point.
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: agskeleton2.0
+*/
+
+
+/* HTML5 DECLARATIONS */
+
+audio[controls],canvas,video {display: inline-block; *display: inline; zoom: 1}
+
+/* BASE 
+----------------------------------------------------- */
+/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
+html {
+    height: 100%; 
+    font-size: 100%; 
+    overflow-y: scroll; 
+    -webkit-text-size-adjust: 100%;
+} 
+/* Improve default text rendering, handling of kerning pairs and ligatures */
+body {
+    min-height: 100%; 
+    -webkit-font-smoothing: antialiased; 
+    font-smoothing: antialiased; 
+    text-rendering: optimizeLegibility; 
+} 
+
+/* DEFAULT  SETTINGS 
+----------------------------------------------------- */
+
+body, button, input, select, textarea {   /* in style.css */ } 
+blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+    margin: 0 0 1.5em; 
+}
+
+/* TYPOGRAPHY 
+-----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -1px;
+    text-shadow:1px 1px 2px rgba(0,0,0,.10);
+}
+h1 { 
+    font-size:5em; 
+    margin-bottom: 0;
+    text-transform: uppercase;
+} 
+h2 {
+    font-size: 3em; 
+    line-height: 1em; 
+    margin-bottom:0;
+        margin-top: 1.2em;
+    display: inline;
+} 
+h3 { 
+    font-size: 1.50em; 
+    line-height: 1.33em; 
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.5em; 
+    line-height: 1em; 
+    margin: 0 0 1em;
+}
+h5 {
+    font-size: 1.3125em; 
+    line-height: 1.14em; 
+    margin-bottom: 1.14em;
+} 
+h6 {
+    font-size: 1em; 
+    line-height: 1.33em; 
+    margin: 0 0 0.7em 0;
+} 
+p, ul, blockquote, pre, td, th, label {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+} 
+small, p.small, .textwidget { 
+    font-size: 0.875em; 
+    line-height: 1.71em; 
+    margin-bottom: 1.71em;
+} /* 14px / 24px */
+
+/* CODE 
+-----------------------------------------------------*/
+pre {
+    white-space: pre; 
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+} /* Allow line wrapping of 'pre' */
+pre, code, kbd, samp {
+    line-height: 1.5em; 
+    margin-bottom: 1.5em; 
+}
+
+/* TABLES 
+----------------------------------------------------- */
+table {
+    border-collapse: collapse; 
+    border-spacing: 0; 
+    margin-bottom: 1.5em;
+}
+th {text-align: left;}
+tr, th, td {  padding-right: 1.5em; }
+
+/* FORMS 
+-----------------------------------------------------*/
+fieldset {border: 0;}
+textarea {
+    overflow: auto; 
+    vertical-align: top;
+}
+/*  styling the input areas  */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    border: 1px solid #dfe0e0;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 4px;
+    outline: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font: 13px Helvetica, Arial, sans-serif;
+    color: #777;
+    margin: 0;
+    width: 95%;
+    max-width: 100%;
+    display: block;
+    background: #fff; 
+}
+select {  padding: 0;}
+/* styling the focused state of above input fields */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid #aaa;
+    color: #444;
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    box-shadow:  0 0 3px rgba(0,0,0,.2); 
+}
+/* the label style */
+label,
+legend {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;  
+}
+input[type="checkbox"] {  display: inline;  }
+label span,
+legend span {
+    font-weight: normal;
+    font-size: 13px;
+    color: #444; 
+}
+
+/* QUOTES 
+-----------------------------------------------------*/
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: ''; 
+    content: none;
+}
+blockquote, q, cite,
+ .button a {
+ font-style: italic;
+ }
+blockquote {
+    padding-left: 1.5em; 
+    border-left: 1px solid #ccc;
+}
+/* LISTS */
+ul, ol {list-style-position: inside; padding: 0}
+li ul, li ol {margin: 0 0 0 1.5em;}
+dl dd {margin-left: 1.5em}
+/* styles the default wp comments classes. because no one wants to reinvent the wheel */
+.commentlist, .children, .widget ul  {
+    list-style-type: none;
+}
+
+/* MEDIA 
+-----------------------------------------------------*/
+/* responsive image elements */
+img, object, embed, video {
+    max-width: 100%;	
+    height: auto;
+} 
+img {
+    border: 0;	
+    -ms-interpolation-mode: bicubic;
+} /* Improve IE's resizing of images */
+svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
+/* ABBREVIATION */
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted #333; 
+    cursor: help;
+}
+/* MARKED/INSERTED/DELETED AND SELECTED TEXT */
+ins, mark {text-decoration: none}
+mark {background: #c47529}
+ins {background: #d49855}
+del {text-decoration: line-through}
+
+/* OTHERS 
+-----------------------------------------------------*/
+strong, b, dt { font-weight: bold;}
+dfn {font-style: italic; }
+var, address {font-style: normal;}
+/* Position 'sub' and 'sup' without affecting line-height */
+sub, sup {
+    font-size: 75%; 
+    line-height: 0; 
+    position: relative; 
+    vertical-align: baseline;
+} 
+/* Move superscripted text up */
+sup {top: -0.5em;} 
+/* Move subscripted text down */
+sub {bottom: -0.25em;} 
+/* Best available ampersand */
+span.amp {
+    font-style:italic;
+    font-size:110%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline;
+} 
+/* DEFAULT MOBILE STYLES 
+-----------------------------------------------------*/
+/* ---------- HYPERLINKS  ----------*/
+a {  text-decoration: none; }
+a:hover {text-decoration: none;}
+a:focus {outline: thin dotted}
+a:hover, a:active {outline: none} /* Better CSS Outline Suppression */
+a[rel=next] { padding-left:30%; }
+
+/* sets the width of the site, allowing us to break out of it when full browser width is needed.
+by using % based, we lose the 'breakpoints' and can, in one line, code for the plethora of viewports now being released into the wild. Market, released into the market. */
+.container {
+    width: 92%; 
+    margin: 0 auto;
+} 
+
+/* ---------- Primary menu ---------- */
+    /* container holding actual menu ul */
+.nav-container  {
+  font-size: 1.6em;
+  text-align:center;
+}
+/* each list element */
+.hor-nav li {
+  position: relative;
+  display: inline;
+}
+/* links on top level list elements. inherits color from universal */
+.hor-nav li a {
+  padding: 3px 10px 7px;
+  white-space: nowrap; 
+  display: inline-block;
+}
+/* hover event, top level list links */
+.hor-nav li a:hover,
+.hor-nav li:hover a { /* in style.css */ }
+/* builds the 'drop down' */
+.nav-container ul ul { 
+    position:absolute; 
+    top:-99999px; 
+    opacity: 0; /* Hide sub level */
+    -webkit-transition: opacity .5s ease-in-out; /* effect */
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    z-index: 497; 
+    padding: 2px; 
+}
+/* triggers the 'action' on hover to reveal the drop down */
+.nav-container ul li:hover>ul { 
+    opacity: 1; 
+    position:absolute; 
+    top: 40px; 
+    left: 0px; 
+    box-shadow: 3px 3px 3px #565656;
+}
+/* sets the links in the dropdown */
+.nav-container ul ul li a {
+    padding: 1px 10px;
+    font-size:0.8em;
+}
+/* sets up the hover response */
+.nav-container ul ul li a:hover {
+    text-decoration: underline;
+}
+ /* ---------- footer menu list elements for all but small mobile ---------- */
+ul.footer-nav  {
+    list-style-type: none;
+}
+ul.footer-nav li {
+    padding: 0 12px;
+}
+ .footer-bkg { 
+    clear: both; 
+}
+ /* ---------- widget menus ---------- */
+/* as menus enjoy each other's company. and won't listen if you go and put them in separate rooms */
+.widget ul li a {
+    border-left: 2px solid #acc0c7; 
+}
+.widget ul li a:hover {
+    text-decoration: none;
+    color:#000;
+}
+
+/* ---------- PADDING / MARGINS ON ELEMENTS ---------- */
+
+/* on header */
+header, .cat-box { margin-bottom: 1.250em;}
+
+.banner,
+.no-banner { margin-bottom: 2em; }
+
+/* sets up the div around the php that calls the featured image as a background */
+.banner { 
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* and then sets up the div for when no banner is uploaded */
+.no-banner { height: 0; }
+
+/* boxes mostly on post pages; also has a light bkg */
+.lt-bkg {
+    margin-bottom: 1.5em;
+}
+
+
+/* ---------- POSITIONING: FLOATS, ALIGNS ---------- */
+
+
+.button, 
+.txt-r { text-align: right; }/* shared text align right */
+
+.center { text-align: center; }/* shared centering of element */
+
+.txt-left { text-align: left; }/* obviously, pushes text left. magicks, huh? */
+
+.floatleft, 
+.alignleft, 
+.hor-nav ul li,  
+ul.footer-nav li, 
+.vcard img, 
+.vcard {  float: left; 	} /* shared floats: both WP defaults and individual */
+
+.floatright, 
+.alignright, 
+.comment-meta { float: right; }
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}/* centering of images used in text editor */
+	
+
+
+/* ---------- MARGINS, HEIGHTS, SIZES ---------- */
+body, 
+h1,  
+h5, 
+ul, 
+blockquote, 
+pre, 
+td, 
+th, 
+label, 
+form, 
+figure,
+.nav-container ul,
+.vcard img  {  margin: 0; }
+
+/* ---------- shared padding: 0 ---------- */
+blockquote, 
+q, 
+pre, 
+address, 
+code, 
+samp, 
+dl, 
+ol, 
+ul, 
+form, 
+table, 
+fieldset, 
+menu, 
+img, 
+button,
+blockquote > p { padding: 0; }
+
+
+/* ---------- BLOCK ELEMENTS ---------- */
+.nav-container ul,  
+ul.footer-nav li,  
+.widget ul li a, 
+.button a,
+/* html5 elements */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {   display: block; }
+
+/* ---------- MARGINS ---------- */
+ /* for the tagline beneath the logo */
+.neg-margin { margin-top: -1.875em; }
+
+.no-m-b { margin-bottom: 0; }/* to remove the bottom margin off any element */
+
+.no-m-t { margin-top: 0; }/* and off the top */
+
+/* ---------- 35PX MARGINS ---------- */
+.margin-bottom-lg,
+.commentlist li { margin-bottom: 2.188em; }
+
+.margin-top-lg { margin-top: 2.188em; }
+
+/*---------- 20PX MARGINS ---------- */
+.margin-bottom-med,
+fieldset,
+.vcard, /* default comments tag */
+.comment-meta {  margin-bottom: 1.250em; }
+
+.margin-t20,
+.children,
+.commentlist,
+.widget ul { margin-top: 1.250em; }
+
+/* ---------- 12PX MARGINS ---------- */
+.margin-b12 {  margin-bottom: 0.750em; }
+
+.margin-t12 { margin-top: 0.750em; }
+
+
+/*---------- PADDING ----------*/
+
+/*---------- 3% & 1% PADDING  ----------*/
+.pad-all3, 
+.comment-body { padding: 3%; }
+
+.pad-all1,  
+.button a { padding: 1%; }
+
+.pad-t1, 
+.widget ul li  {
+    padding-top: 1%;
+}
+
+/* padding bottom */
+.pad-b1, 
+.widget ul li  {
+    padding-bottom: 1%;
+}
+
+/* padding left */
+.pad-l1, 
+.reply a { 
+	padding-left: 1%;
+}
+
+/* padding right */
+.pad-r1, 
+.reply a { 
+	padding-right: 1%;
+ }
+
+/*---------- 12px PADDING  ----------*/
+.pad-l12, 
+.vcard img, 
+.button a,
+.widget ul li a {
+  padding-right: 0.750em;
+}
+
+.pad-l20, 
+.widget ul li a {  
+	padding-left: 0.750em;
+ }
+
+/*---------- 4px PADDING  ----------*/
+
+.pad-all-sm,
+textarea {  padding: 0.25em; } /* 4px */
+
+/*---------- 20px PADDING  ----------*/
+.pad-t-med { padding-top:  1.250em; }
+
+.pad-b-med { padding-bottom:  1.250em; }
+
+/*---------- 35px PADDING  ----------*/
+.pad-t-lg { padding-top:  2.188em; }
+
+.pad-b-lg { padding-bottom:  2.188em;}
+
+/* MICRO CLEARFIX  */
+.cf:before, .cf:after {content:"";display:table} /* For modern browsers */
+ .cf:after, header:after,
+.comment-body p {clear:both}
+.cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
+    
+    
+/* media Queries
+FOLDING FLUID GRID
+Change widths as necessary
+------------------------------------------- */
+
+/* MOBILE PORTRAIT */
+@media only screen and (min-width: 320px) {
+
+    /* sets the grid at the smallest viewport, as everything larger will inherit what's here */
+    .full-column,
+    .half-column,
+    .one-third-column,
+    aside,
+    .two-thirds-column,
+    .one-quarter-column,
+    .three-quarter-column, 
+    .widget,
+    ul.cat-boxes li {
+        display:inline; 
+        position: relative; 
+        float: left;
+        width: 100%;
+    }
+
+/* sets up ever second element in the cat-box list to display a margin. keeps the layout flush */
+ul.cat-boxes li:nth-child(2n) { margin-left:0; }
+.alt { margin-left:0; }
+
+
+    /* footer menu changes for mobile, displaying horizontal instead of vertical */
+    #menu-footer-menu li a, #menu-footer-menu li  { 
+    display: inline; 
+    padding-right: 0.313em;
+    }
+    #menu-footer-menu {
+    margin-bottom: 1.250em;
+    }
+    /* a roundabout way to hide a particular element. in this case, it's the image in the footer. */
+    #text-3 { display: none; }
+    
+}
+
+/* MOBILE LANDSCAPE */
+@media only screen and (min-width: 480px) {
+
+/* inherits most from the 320px viewport elements */
+
+
+/* SMALL TABLET */
+@media only screen and (min-width: 600px) {
+
+/* sets up the grid that the larger viewports will inherit.
+*  structure logic: 
+*  -- these can be used, ultimately, not only as top level width elements, but as child elements. technically, you could stack them nearly infinitely. But would you want to. 		
+*/
+    /* full width column */
+ .full-column, 
+ .sticky { width: 100%; }
+
+ /* 2 columns: name each */
+ .half-column,
+ul.cat-boxes li { width: 48%; }
+
+ /* 3 columns: name each */
+ .one-third-column,
+ aside	{ width: 31.333%; }
+
+ /* 60% of the page column */
+ .two-thirds-column, 
+ #respond  { width: 64%; }
+
+ /* 4 columns / approx 1/4 of parent width: name each */
+ .one-quarter-column,
+ .footer-bkg .widget	{ width: 21.333%; }
+
+ /* 5 columns / 3/4 of the parent column */
+ .three-quarter-column { width: 74.667%; }
+
+ /* sets up ever second element in the cat-box list to display a margin. keeps the layout flush */
+ul.cat-boxes li:nth-child(2n) { margin-left:19px; }
+.alt { margin-left:19px; }
+
+
+
+ /* sets the h1 to larger size */	
+ h1 { 
+     font-size:10.75em; 
+ }
+ /* for home page boxes, that have varying content, but need consistency as to where the buttons are */
+ .m-height { 
+ height: 480px;
+ overflow: hidden; /* not ideal, I know. This was added at the 12th hour, on launch.  Ask me about why this is in here, in the grand scheme of things. */
+ }
+ /* the buttons on the home page, within the 3 boxes. this makes the position uniform, no matter the content */	
+ .sticky {
+ position: absolute;
+ bottom:0; 
+ }
+ /* to undo at this res, what the smaller sizes did */
+ /* footer menu changes for mobile, displaying horizontal instead of vertical */
+ #menu-footer-menu li a, #menu-footer-menu li  { 
+ display: block; 
+ padding-right: 0;
+ }
+ #menu-footer-menu {
+ margin-bottom: 0;
+ }
+ /* a roundabout way to hide a particular element. in this case, it's the image in the footer. */
+ #text-3 { display: block; }
+ }
+
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 768px) { 
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) { 
+}
+
+@media only screen and (min-width: 1280px) { 
+/* DESKTOP */
+}
+
+/* WIDESCREEN */
+/* Increased body size for legibility */
+@media only screen and (min-width: 1400px) { 
+    body {
+        font-size:116.75%; 
+      } /* 18.5px / 28px */
+	
+    /* changes the height slightly for viewport */
+    .m-height { height: 530px; }
+       
+}
+
+/* PRINT */
+@media print {
+  * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */
+  a, a:visited {color: #444 !important; text-decoration: underline}
+  a[href]:after {content: " (" attr(href) ")"}
+  abbr[title]:after {content: " (" attr(title) ")"}
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
+  pre, blockquote {border: 1px solid #999; page-break-inside: avoid; }
+  thead {display: table-header-group; } /* Repeat header row at top of each printed page */
+  tr, img {page-break-inside: avoid; }
+  img {max-width: 100% !important; }
+  @page {margin: 0.5cm}
+  p, h2, h3 {orphans: 3; widows: 3}
+  h2, h3{page-break-after: avoid}
+}
