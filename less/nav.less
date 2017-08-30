@@ -1,1 +1,143 @@
 // handles main navigation
+/* PRIMARY MENU
+----------------------------------------------------- */
+/* container holding actual menu ul; spans width of browser */
+
+// making this invisible while locally testing.
+#wpadminbar { display: none; }
+
+
+header  {
+  font: 300 2.2em/1em 'latin', serif;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url(images/body-top.jpg) top center no-repeat;
+  z-index: 1;
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(224,220,209,0.3), rgba(224,220,209,0.3) 35%, transparent 35%, @primary-border 35%, transparent 35.5%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+
+    img {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu-icon {
+	display: none;
+}
+	@media only screen and (min-width: 300px) and (max-width: 767px) {
+		.menu-icon {
+		display: block;
+		float: right;
+		padding: 14px 14px 0;
+		cursor: pointer;    width: 102px;    text-align: right;
+		}
+		#ag-primary-menu { display: none; }
+	}
+
+/* each list element */
+.hor-nav li {
+  position: relative;
+  display: inline;
+}
+
+/* links on top level list elements. inherits color from universal */
+.hor-nav li a {
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: inline-block;
+	color: #000;
+}
+
+/* hover event, top level list links */
+.hor-nav li a:hover  { color: #65b2b3; }
+
+/* builds the 'drop down' */
+.hor-nav ul {
+    position:absolute;
+    top:-99999px;
+    opacity: 0; /* Hide sub level */
+    -webkit-transition: opacity .5s ease-in-out; /* effect */
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    z-index: 497;
+    padding: 2px;
+		background: #fcfaf5;
+    border-bottom: 1px solid #d6d3be;
+}
+/* triggers the 'action' on hover to reveal the drop down */
+.hor-nav li:hover>ul {
+    opacity: 1;
+    position: absolute;
+    top: 45px;
+    left: 5px;
+}
+/* sets the links in the dropdown */
+.hor-nav ul li a {
+    padding: 1px 10px;
+    font-size: 0.8em;
+		color: #000;
+}
+/* sets up the hover response */
+.hor-nav ul li a:hover {
+    color: #65b2b3;
+}
+
+	@media only screen and (min-width: 300px) and (max-width: 767px) {
+		#ag-primary-menu {
+			padding-top: 45px;
+		}
+
+		.hor-nav li {
+			display: block;
+			background: #fcfaf5;
+			border-bottom: 1px solid #edebe6;
+			z-index: 9999;
+			text-align: right;
+			line-height: 1em;
+		}
+		.hor-nav li a {
+			display: block;
+			padding: 12px 12px 0;
+			}
+	}
+/* FOOTER MENU
+----------------------------------------------------- */
+#menu-footer-menu  {
+  list-style-type: none;
+}
+#menu-footer-menu li {
+	display: inline-block;
+	margin-bottom: 5px;
+	}
+#menu-footer-menu li a {
+	color:#fff;
+	padding: 6px 12px;
+	background: #3fabae;
+}
+#menu-footer-menu li a:hover {
+	background: #282827;
+	}
+ .footer-bkg {
+    clear: both;
+		background: #8abfc0;
+		padding: 40px 0;
+}
+
+/* WIDGET MENUS
+----------------------------------------------------- */
+/* as menus enjoy each other's company. and won't listen if you go and put them in separate rooms */
+
+.widget ul li a:hover {
+    text-decoration: none;
+    color:#000;
+}

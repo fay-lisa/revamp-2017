@@ -21,25 +21,22 @@
 
 <!-- Minimized jQuery from Google CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-         jQuery(document).ready(function($){
+  <script type="text/javascript">
+       jQuery(document).ready(function($){
 
-            /* prepend menu icon */
-            $('.top-nav').prepend('<div class="menu-icon">Menu</div>');
+          /* prepend menu icon */
+          $('.top-nav').prepend('<div class="menu-icon">Menu</div>');
 
-            /* toggle nav */
-            $(".menu-icon").on("click", function(){
-                    $("#ag-primary-menu").slideToggle();
-                    $(this).toggleClass("active");
+          /* toggle nav */
+          $(".menu-icon").on("click", function(){
+                  $("#ag-primary-menu").slideToggle();
+                  $(this).toggleClass("active");
 
-            });
+          });
     });
 </script>
- <!-- html5 shim -->
-<!-- HTML5 IE Enabling Script -->
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<!-- Polyfill for ie8, so the poor sod understands what we're talking about -->
+<!-- Polyfill. just in case -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
 
 	<?php
@@ -70,22 +67,17 @@
 
 
 <!-- add the auto-generated WP body classes for easier CSS styling of individual site sections -->
-<body <?php body_class('body-bkg'); ?>>
+<body>
 
-  <header class="nav-container">
-		<div class="top-bkg">
-			<nav class="container omega">
-
-				<a class="logo column alpha" href="<?php echo get_option('home'); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="faylisa.com: web designer, css poet">
-				</a>
-
-				<div class="top-nav">
+  <header>
+    <div class="top-nav">
+      <a class="logo" href="<?php echo get_option('home'); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="faylisa.com: web designer, css poet">
+      </a>
+			<nav>
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_class' => 'hor-nav', 'container_id' => 'ag-primary-menu', 'theme_location' => 'ag-primary-menu' ) ); ?>
-				</div><!-- top-nav -->
-
 			</nav><!-- nav -->
-		</div><!-- top-bkg -->
+    </div>
 	</header><!-- header -->
 
 

@@ -1,1 +1,94 @@
-// elements used site wide. 
+// elements used site wide.
+
+/* DEFAULT STYLES
+-----------------------------------------------------*/
+/* background on first element. sets up the universal image behind the image */
+
+html, body {
+		font: 100%/1.5em  'Source Sans Pro', sans-serif;
+		color: #2d2d2d;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+		height: 100%;
+}
+
+section {
+  z-index: 2;
+}
+
+/* BANNER ITEMS
+----------------------------------------------------- */
+.banner, .banner-home {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	padding-top: 154px;
+	text-align: center;
+
+	}
+
+
+hr {
+    border: solid #dddcdb;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 23px 0;
+    height: 0;
+}
+/* changes the color of the hr for particular sections */
+.dark {
+	border: solid #65b2b3;
+	border-width: 1px 0 0;
+	}
+.grey {
+	border: solid #3f3f3e;
+	border-width: 1px 0 0;
+}
+.no-m-t { margin-top: 0px; }
+
+/* MARKED/INSERTED/DELETED AND SELECTED TEXT
+-----------------------------------------------------*/
+	ins, mark {text-decoration: none}
+	mark {background: #c47529}
+	ins {background: #d49855}
+	del {text-decoration: line-through}
+
+/* QUOTES
+-----------------------------------------------------*/
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+blockquote, q, cite,
+	.button a {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.5em;
+    border-left: 1px solid #ccc;
+}
+
+/* LISTS
+-----------------------------------------------------*/
+ul, ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+li ul, li ol {
+    margin: 0 0 0 1.5em;
+}
+
+dl dd {
+    margin-left: 1.5em;
+}
+	/* styles the default wp comments classes. because no one wants to reinvent the wheel */
+.commentlist, .children, .widget ul {
+    list-style-type: none;
+}

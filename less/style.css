@@ -374,6 +374,9 @@ p.small,
 /* DEFAULT STYLES
 -----------------------------------------------------*/
 /* background on first element. sets up the universal image behind the image */
+.body-bkg {
+  background: url(images/body-top.jpg) top center no-repeat;
+}
 html,
 body {
   font: 100%/1.5em 'Source Sans Pro', sans-serif;
@@ -382,9 +385,6 @@ body {
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   height: 100%;
-}
-section {
-  z-index: 2;
 }
 /* BANNER ITEMS
 ----------------------------------------------------- */
@@ -476,29 +476,9 @@ dl dd {
 /* PRIMARY MENU
 ----------------------------------------------------- */
 /* container holding actual menu ul; spans width of browser */
-#wpadminbar {
-  display: none;
-}
-header {
+.nav-container {
   font: 300 2.2em/1em 'latin', serif;
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: url(images/body-top.jpg) top center no-repeat;
-  z-index: 1;
-}
-header .top-nav {
-  display: flex;
-  justify-content: space-between;
-  background-image: linear-gradient(to bottom, rgba(224, 220, 209, 0.3), rgba(224, 220, 209, 0.3) 35%, transparent 35%, #edebe6 35%, transparent 35.5%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 3;
-}
-header .top-nav img {
-  margin-bottom: 0;
 }
 .menu-icon {
   display: none;
@@ -609,200 +589,4 @@ header .top-nav img {
 .widget ul li a:hover {
   text-decoration: none;
   color: #000;
-}
-/* ANIMATION FOR EXPERTISE SECTION
------------------------------------------------------ */
-@-moz-keyframes fadeInRightAndGo {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(100px);
-  }
-  3% {
-    opacity: 1;
-    -moz-transform: translateX(0);
-  }
-  47% {
-    opacity: 1;
-    -moz-transform: translateX(0);
-  }
-  50% {
-    opacity: 0;
-    -moz-transform: translateX(-100px);
-  }
-  100% {
-    opacity: 0;
-    -moz-transform: translateX(-100px);
-  }
-}
-@-o-keyframes fadeInRightAndGo {
-  0% {
-    opacity: 0;
-    -o-transform: translateX(100px);
-  }
-  3% {
-    opacity: 1;
-    -o-transform: translateX(0);
-  }
-  47% {
-    opacity: 1;
-    -o-transform: translateX(0);
-  }
-  50% {
-    opacity: 0;
-    -o-transform: translateX(-100px);
-  }
-  100% {
-    opacity: 0;
-    -o-transform: translateX(-100px);
-  }
-}
-@-webkit-keyframes fadeInRightAndGo {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-  }
-  3% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-  47% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-  }
-}
-@keyframes fadeInRightAndGo {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  3% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  47% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-}
-.fadeRightAndGo {
-  -moz-animation: fadeInRightAndGo 6s ease infinite both;
-  -o-animation: fadeInRightAndGo 6s ease infinite both;
-  -webkit-animation: fadeInRightAndGo 6s ease infinite both;
-  animation: fadeInRightAndGo 6s ease infinite both;
-}
-.relative,
-.port-relative {
-  position: relative;
-  padding-bottom: 190px;
-  overflow: hidden;
-}
-.port-relative {
-  padding-bottom: 120px;
-}
-ul.slide,
-ul.port-slide {
-  left: 0;
-  position: absolute;
-  top: 70px;
-  width: 100%;
-  text-align: center;
-}
-/* on portfolio page */
-ul.port-slide {
-  top: 35px;
-}
-@media only screen and (min-width: 300px) and (max-width: 767px) {
-  ul.slide,
-  ul.port-slide {
-    top: 0;
-  }
-}
-.section-4 li {
-  display: inline-block;
-  list-style-type: none;
-  padding: 0 2%;
-  font-weight: 300;
-  font-size: 1.1em;
-}
-.expertise-2 {
-  -moz-animation-delay: 100ms;
-  -o-animation-delay: 100ms;
-  -webkit-animation-delay: 100ms;
-  animation-delay: 100ms;
-}
-.expertise-3 {
-  -moz-animation-delay: 200ms;
-  -o-animation-delay: 200ms;
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
-}
-.expertise-4 {
-  -moz-animation-delay: 300ms;
-  -o-animation-delay: 300ms;
-  -webkit-animation-delay: 300ms;
-  animation-delay: 300ms;
-}
-.expertise-5 {
-  -moz-animation-delay: 400ms;
-  -o-animation-delay: 400ms;
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms;
-}
-.expertise-6 {
-  -moz-animation-delay: 500ms;
-  -o-animation-delay: 500ms;
-  -webkit-animation-delay: 500ms;
-  animation-delay: 500ms;
-}
-.expertise-7 {
-  -moz-animation-delay: 3000ms;
-  -o-animation-delay: 3000ms;
-  -webkit-animation-delay: 3000ms;
-  animation-delay: 3000ms;
-}
-.expertise-8 {
-  -moz-animation-delay: 3100ms;
-  -o-animation-delay: 3100ms;
-  -webkit-animation-delay: 3100ms;
-  animation-delay: 3100ms;
-}
-.expertise-9 {
-  -moz-animation-delay: 3200ms;
-  -o-animation-delay: 3200ms;
-  -webkit-animation-delay: 3200ms;
-  animation-delay: 3200ms;
-}
-.expertise-10 {
-  -moz-animation-delay: 33000ms;
-  -o-animation-delay: 3300ms;
-  -webkit-animation-delay: 3300ms;
-  animation-delay: 3300ms;
-}
-.expertise-11 {
-  -moz-animation-delay: 3400ms;
-  -o-animation-delay: 3400ms;
-  -webkit-animation-delay: 3400ms;
-  animation-delay: 3400ms;
-}
-.expertise-12 {
-  -moz-animation-delay: 3500ms;
-  -o-animation-delay: 3500ms;
-  -webkit-animation-delay: 3500ms;
-  animation-delay: 3500ms;
 }

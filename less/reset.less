@@ -1,4 +1,4 @@
-// http://meyerweb.com/eric/tools/css/reset/
+// based on http://meyerweb.com/eric/tools/css/reset/
 //   v2.0 | 20110126
 //   License: none (public domain)
 
@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+/* wiping the slate clean
+-----------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +25,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 }
-/* HTML5 display-role reset for older browsers */
+
+/* HTML5 display-role reset for older browsers
+-----------------------------------------------------*/
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -44,8 +48,61 @@ header, article, p, section, footer {
   width: 100%;
 }
 
-// responsive image elements
+/* responsive image elements
+-----------------------------------------------------*/
 img, object, embed, video {
   max-width: 100%;
   height: auto;
+}
+
+/* when we do need a margin
+-----------------------------------------------------*/
+blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+    margin: 0 0 1.5em;
+}
+/* removing margins
+-----------------------------------------------------*/
+body, h1, h5, ul, blockquote, pre, td, th, label, form, figure,.nav-container ul,.vcard img {
+    margin: 0;
+}
+
+/* shared padding: 0
+-----------------------------------------------------*/
+blockquote, q, pre, address, code, samp, dl, ol, ul, form, table, fieldset, menu, img, button, blockquote > p {
+    padding: 0;
+}
+
+/* all who share block
+-----------------------------------------------------*/
+.nav-container ul, ul.footer-nav li,  .widget ul li a, .button a, /* html5 elements */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+    display: block;
+}
+
+/* CODE
+-----------------------------------------------------*/
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+} /* Allow line wrapping of 'pre' */
+
+pre, code, kbd, samp {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* tables. just in case hell freezes over
+----------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.5em;
+}
+
+th {
+    text-align: left;
+}
+
+tr, th, td {
+    padding-right: 1.5em;
 }

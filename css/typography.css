@@ -1,0 +1,8 @@
+/* calls the serif */
+@font-face {
+  font-family: 'latin';
+  src: url('fonts/latinxc-webfont.eot');
+  src: url('fonts/latinxc-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/latinxc-webfont.woff') format('woff'), url('fonts/latinxc-webfont.ttf') format('truetype'), url('fonts/latinxc-webfont.svg#latin_xcn_btregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
